@@ -2,7 +2,7 @@
 1 Initially Every client register have a role of "user"
 Database Administrator can make someone admin manually by updating the role field of record from "user" to "admin"
 
-2 Note-> just dont chnage CONTROLE_ROLE 
+2 Note-> just dont chnage CONTROLE_ROLE=admin other values can be changed
 .env file have some scret keys, so you have to provide them to run the project correctly, 
 i am to going to share with you the template you just have to give values there
 
