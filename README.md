@@ -13,5 +13,4 @@ CODE_TO_VERIFY=
 STRIPE_KEY=
 PORT=
 
-
 3 postmanAPI_File this file can be found in Mini_Book_Shop_Backend folder you just have to import it in postman to work with the ready API's 
