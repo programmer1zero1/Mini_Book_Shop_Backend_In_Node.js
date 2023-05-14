@@ -1,0 +1,636 @@
+{
+	"info": {
+		"_postman_id": "3907c8cf-e258-4fc8-a9c9-4ce9f08d1f6d",
+		"name": "Mini Book Shop(Muhammad_Ramzan)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login/Logout",
+			"item": [
+				{
+					"name": "userRegistration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pname\":\"Ramzan\",\r\n    \"email\":\"programmer1zero1@gmail.com\",\r\n    \"password\":\"696263\",\r\n    \"cpassword\":\"696263\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userVerify",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/verify?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVmMzI0ODZkMDVkOWM0MTVjMjE3NDgiLCJpYXQiOjE2ODM5NjAzOTJ9.z56-YcdU51lBDNhWZr7Ln5QfsyNkuCetFBCFetl80vs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"verify"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVmMzI0ODZkMDVkOWM0MTVjMjE3NDgiLCJpYXQiOjE2ODM5NjAzOTJ9.z56-YcdU51lBDNhWZr7Ln5QfsyNkuCetFBCFetl80vs"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userLogin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVjOGU2YjBhN2I4YWMzMTk5NjU3ZDMiLCJpYXQiOjE2ODM3ODczNzF9.28nCZujLXmSiMESjVpxcbK2hRl0QW-zi28-PMqgWiwk",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"juxtchill2brelax@gmail.com\",\r\n    \"password\":\"m696263\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/loginuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"loginuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userForgotPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTNjNzA5ZjY2NDIwZTgwZmE1OTIiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4Mzg3NDgxMSwiZXhwIjoxNjg0MDQ3NjExfQ.hw6CUMGyBXXxUq0m2AZPfBlpTXw9oViVflK6H16y28Y",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"programmer1zero1@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/forgotuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"forgotuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userResetPassword",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTNjNzA5ZjY2NDIwZTgwZmE1OTIiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4Mzg3NDgxMSwiZXhwIjoxNjg0MDQ3NjExfQ.hw6CUMGyBXXxUq0m2AZPfBlpTXw9oViVflK6H16y28Y",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"344449\",\r\n    \"password\":\"696263\",\r\n    \"cpassword\":\"696263\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/reset?userid=645c9698bb07740bb7b0a574",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"reset"
+							],
+							"query": [
+								{
+									"key": "userid",
+									"value": "645c9698bb07740bb7b0a574"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client/User",
+			"item": [
+				{
+					"name": "showBooks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTNjNzA5ZjY2NDIwZTgwZmE1OTIiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4Mzk3NDExMiwiZXhwIjoxNjg0MDYwNTEyfQ.Cok64fsEM9p9GJ2RQ-icoqls9_Z57o9q89BHHe4_RrA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/user/showBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"showBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buyBook",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTNjNzA5ZjY2NDIwZTgwZmE1OTIiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4Mzk3MjQxNiwiZXhwIjoxNjg0MDU4ODE2fQ.trnWAL8J7gC5ucAjKflc89nCXYI-T-EKdI59yCF_h2w",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/user/buyBook?bookid=645f27b1dfd374f5dd906fc8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"buyBook"
+							],
+							"query": [
+								{
+									"key": "bookid",
+									"value": "645f27b1dfd374f5dd906fc8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "readbuyedBook",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTNjNzA5ZjY2NDIwZTgwZmE1OTIiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4Mzk3MjQxNiwiZXhwIjoxNjg0MDU4ODE2fQ.trnWAL8J7gC5ucAjKflc89nCXYI-T-EKdI59yCF_h2w",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3200/user/showSpecificBook?bookid=645f27b1dfd374f5dd906fc8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"showSpecificBook"
+							],
+							"query": [
+								{
+									"key": "bookid",
+									"value": "645f27b1dfd374f5dd906fc8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "myBuiedBooks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTNjNzA5ZjY2NDIwZTgwZmE1OTIiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4Mzk3NDExMiwiZXhwIjoxNjg0MDYwNTEyfQ.Cok64fsEM9p9GJ2RQ-icoqls9_Z57o9q89BHHe4_RrA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3200/user/myBuiedBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"myBuiedBook"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Owner/Admin",
+			"item": [
+				{
+					"name": "CRUD",
+					"item": [
+						{
+							"name": "createBooks",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTVmYTZlZTZhZmMzZmY1MzYyYzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODQwNTkzODksImV4cCI6MTY4NDE0NTc4OX0.kfSHXXy7toFPBBFxcQVVkupuXYhtBliIvHHCk2bbdUA",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"booktitle\": \"angel jfahrgfyrgyg jfbdhsf\",\r\n    \"bookId\": 98763,\r\n    \"bookauthor\": \"prince\",\r\n    \"bookchapters\": [\r\n        {\r\n            \"title\": \"Volume Error\",\r\n            \"chapterNo\": 1,\r\n            \"pages\": [\r\n                {\r\n                    \"pageNo\": 1,\r\n                    \"body\": \"jhdbvshfvbhfbviuhetvbgibvsvbfjvbhfbvhbjhfbvdgybgdtyjtgdjbtgbdtybgdytug\",\r\n                    \"_id\": \"645b2060d8de25f5154c2645\"\r\n                }, \r\n                {\r\n                    \"pageNo\": 2,\r\n                    \"body\": \"jhdbvshfvbhfbviuhetvbgibvsvbfjvbhfbvhbjhfbvdgybgdtyjtgdjbtgbdtybgdytug\",\r\n                    \"_id\": \"645b2060d8de25f5154c2645\"\r\n                }\r\n            ],\r\n            \"_id\": \"645b2060d8de25f5154c2644\"\r\n        },\r\n        {\r\n            \"title\": \"Volume Handling\",\r\n            \"chapterNo\": 2,\r\n            \"pages\": [\r\n                {\r\n                    \"pageNo\": 1,\r\n                    \"body\": \"jhdbvshfvbhfbviuhetvbgibvsvbfjvbhfbvhbjhfbvdgybgdtyjtgdjbtgbdtybgdytug\"\r\n                },\r\n                {\r\n                    \"pageNo\": 2,\r\n                    \"body\": \"jhdbvshfvbhfbviuhetvbgibvsvbfjvbhfbvhbjhfbvdgybgdtyjtgdjbtgbdtybgdytug\"\r\n                },\r\n                {\r\n                    \"pageNo\": 3,\r\n                    \"body\": \"jhdbvshfvbhfbviuhetvbgibvsvbfjvbhfbvhbjhfbvdgybgdtyjtgdjbtgbdtybgdytug\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3200/admin/addBook",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3200",
+									"path": [
+										"admin",
+										"addBook"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateBooks",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTVmYTZlZTZhZmMzZmY1MzYyYzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODM5NDY5OTAsImV4cCI6MTY4NDAzMzM5MH0.I2HWx9akkfntrezv8osx2fZVYnyNRIutq79qM8gPfMc",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3200/admin/getupdateBook?bookid=645f21dd1130a1a91c6befab",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3200",
+									"path": [
+										"admin",
+										"getupdateBook"
+									],
+									"query": [
+										{
+											"key": "bookid",
+											"value": "645f21dd1130a1a91c6befab"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatebooks",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTVmYTZlZTZhZmMzZmY1MzYyYzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODM5NDY5OTAsImV4cCI6MTY4NDAzMzM5MH0.I2HWx9akkfntrezv8osx2fZVYnyNRIutq79qM8gPfMc",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"booktitle\": \"angel\",\r\n    \"bookId\": 98763,\r\n    \"bookauthor\": \"prince\",\r\n    \"bookchapters\": [\r\n        {\r\n            \"title\": \"Volume Error\",\r\n            \"chapterNo\": 1,\r\n            \"pages\": [\r\n                {\r\n                    \"pageNo\": 1,\r\n                    \"body\": \"jhdbvshfvbhfbviuhetvbgibvsvbfjvbhfbvhbjhfbvdgybgdtyjtgdjbtgbdtybgdytug\",\r\n                    \"_id\": \"645b2060d8de25f5154c2645\"\r\n                }, \r\n                {\r\n                    \"pageNo\": 2,\r\n                    \"body\": \"jhdbvshfvbhfbviuhetvbgibvsvbfjvbhfbvhbjhfbvdgybgdtyjtgdjbtgbdtybgdytug\",\r\n                    \"_id\": \"645b2060d8de25f5154c2645\"\r\n                }\r\n            ],\r\n            \"_id\": \"645b2060d8de25f5154c2644\"\r\n        },\r\n        {\r\n            \"title\": \"Volume Handling\",\r\n            \"chapterNo\": 2,\r\n            \"pages\": [\r\n                {\r\n                    \"pageNo\": 1,\r\n                    \"body\": \"jhdbvshfvbhfbviuhetvbgibvsvbfjvbhfbvhbjhfbvdgybgdtyjtgdjbtgbdtybgdytug\"\r\n                },\r\n                {\r\n                    \"pageNo\": 2,\r\n                    \"body\": \"jhdbvshfvbhfbviuhetvbgibvsvbfjvbhfbvhbjhfbvdgybgdtyjtgdjbtgbdtybgdytug\"\r\n                },\r\n                {\r\n                    \"pageNo\": 3,\r\n                    \"body\": \"jhdbvshfvbhfbviuhetvbgibvsvbfjvbhfbvhbjhfbvdgybgdtyjtgdjbtgbdtybgdytug\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3200/admin/updateBook?bookid=645f21dd1130a1a91c6befab",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3200",
+									"path": [
+										"admin",
+										"updateBook"
+									],
+									"query": [
+										{
+											"key": "bookid",
+											"value": "645f21dd1130a1a91c6befab"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteBooks",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTVmYTZlZTZhZmMzZmY1MzYyYzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODM5NDY5OTAsImV4cCI6MTY4NDAzMzM5MH0.I2HWx9akkfntrezv8osx2fZVYnyNRIutq79qM8gPfMc",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3200/admin/deleteBook?bookid=645f1bafec10d1d9d04381f0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3200",
+									"path": [
+										"admin",
+										"deleteBook"
+									],
+									"query": [
+										{
+											"key": "bookid",
+											"value": "645f1bafec10d1d9d04381f0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "userControl",
+					"item": [
+						{
+							"name": "allUsers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTVmYTZlZTZhZmMzZmY1MzYyYzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODM5NDY5OTAsImV4cCI6MTY4NDAzMzM5MH0.I2HWx9akkfntrezv8osx2fZVYnyNRIutq79qM8gPfMc",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3200/admin/userAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3200",
+									"path": [
+										"admin",
+										"userAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user?blocked",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTVmYTZlZTZhZmMzZmY1MzYyYzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODM5NDY5OTAsImV4cCI6MTY4NDAzMzM5MH0.I2HWx9akkfntrezv8osx2fZVYnyNRIutq79qM8gPfMc",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3200/admin/userBlocked?userid=645de3c709f66420e80fa592",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3200",
+									"path": [
+										"admin",
+										"userBlocked"
+									],
+									"query": [
+										{
+											"key": "userid",
+											"value": "645de3c709f66420e80fa592"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "userBlock|unBlock",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTVmYTZlZTZhZmMzZmY1MzYyYzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODM5NDY5OTAsImV4cCI6MTY4NDAzMzM5MH0.I2HWx9akkfntrezv8osx2fZVYnyNRIutq79qM8gPfMc",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3200/admin/userBlocked?userid=645de3c709f66420e80fa592&isblocked=false",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3200",
+									"path": [
+										"admin",
+										"userBlocked"
+									],
+									"query": [
+										{
+											"key": "userid",
+											"value": "645de3c709f66420e80fa592"
+										},
+										{
+											"key": "isblocked",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "salesInfo",
+					"item": [
+						{
+							"name": "saleReport",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVkZTVmYTZlZTZhZmMzZmY1MzYyYzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODQwNTkzODksImV4cCI6MTY4NDE0NTc4OX0.kfSHXXy7toFPBBFxcQVVkupuXYhtBliIvHHCk2bbdUA",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3200/admin/getsaleReport?bookid=645f27b1dfd374f5dd906fc8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3200",
+									"path": [
+										"admin",
+										"getsaleReport"
+									],
+									"query": [
+										{
+											"key": "bookid",
+											"value": "645f27b1dfd374f5dd906fc8"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
